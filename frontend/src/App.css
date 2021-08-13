@@ -30,12 +30,12 @@
 
 @keyframes dance-animation {
   from {
-    transform: rotate(-20deg);
+    transform: translate(-20%, 0) rotate(-20deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: translate(20%, 0) rotate(20deg);
   }
   to {
-    transform: rotate(-20deg);
+    transform: translate(-20%, 0) rotate(-20deg);
   }
 }
