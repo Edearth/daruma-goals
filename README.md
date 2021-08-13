@@ -3,13 +3,12 @@
 ## What is this project about?
 
 This is _yet another to-do/goal tracking app_.
-I want to have a reminder of what my goals are,
-so when I read about darumas and liked the concept
-I thought about making a home page like that.
-I also want to learn more about React,
-so this is the perfect excuse.
-
-Since
+I wanted to have something very visual to remind my current goals.
+Then I read about darumas and I liked the concept,
+so I thought about making a home page that showed a bunch of them,
+each representing a goal.
+And since I also want to learn more about React,
+this is the perfect excuse.
 
 ## How do darumas work?
 
