@@ -24,6 +24,7 @@ class DarumaCreationButton extends React.Component {
         <button onClick={this.showDialog}>+</button>
         <DarumaCreationDialog
             shown={this.state.isDialogShown}
+            createDaruma={this.props.createDaruma}
             onRequestClose={this.hideDialog} />
       </div>
     );

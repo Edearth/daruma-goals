@@ -40,12 +40,25 @@
   outline: none;
 }
 
-.GoalCreationDialog {
+.dialog {
   width: 50%;
   padding: 20px;
   background: white;
   overflow-y: auto;
   border-radius: 16px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /*justify-content: center;*/
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
 @keyframes dance-animation {
