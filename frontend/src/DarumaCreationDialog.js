@@ -2,14 +2,13 @@ import React from "react";
 import Modal from "react-modal";
 import './App.css';
 import { ReactComponent as Daruma } from './daruma.svg';
-//Modal.setAppElement("#root");
 
-function DarumaCompletionDialog(props) {
+function DarumaCreationDialog(props) {
   return (
     <Modal
-        className="GoalCompletionModal"
+        className="GoalCreationModal"
         isOpen={props.shown}>
-      <div className="GoalCompletionDialog">
+      <div className="GoalCreationDialog">
         <button style={{float:"right"}} onClick={props.onRequestClose}>x</button>
         <br />
         <Daruma width="400px" />
@@ -19,4 +18,4 @@ function DarumaCompletionDialog(props) {
   )
 }
 
-export { DarumaCompletionDialog };
+export { DarumaCreationDialog };

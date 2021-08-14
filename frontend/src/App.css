@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 
-.GoalCompletionModal {
+.GoalCreationModal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@
   outline: none;
 }
 
-.GoalCompletionDialog {
+.GoalCreationDialog {
   width: 50%;
   padding: 20px;
   background: white;

@@ -1,7 +1,7 @@
 import React from "react";
-import { DarumaCompletionDialog } from "./GoalCompletion.js"
+import { DarumaCreationDialog } from "./DarumaCreationDialog.js"
 
-class DarumaCompletionButton extends React.Component {
+class DarumaCreationButton extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,7 +22,7 @@ class DarumaCompletionButton extends React.Component {
     return (
       <div style={{float:"right"}}>
         <button onClick={this.showDialog}>+</button>
-        <DarumaCompletionDialog
+        <DarumaCreationDialog
             shown={this.state.isDialogShown}
             onRequestClose={this.hideDialog} />
       </div>
@@ -31,4 +31,4 @@ class DarumaCompletionButton extends React.Component {
 
 }
 
-export { DarumaCompletionButton };
+export { DarumaCreationButton };

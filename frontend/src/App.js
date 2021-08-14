@@ -1,7 +1,7 @@
 import { ReactComponent as Daruma} from './daruma.svg';
 import React from "react";
 import './App.css';
-import { DarumaCompletionButton } from './DarumaCompletionButton.js';
+import { DarumaCreationButton } from './DarumaCreationButton.js';
 
 /*
 crimson
@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <DarumaCompletionButton />
+        <DarumaCreationButton />
         <header className="App-header">
           <Daruma fill="crimson" className="dancing-daruma" alt="The selected daruma goal"/>
           <p>Ramen stall kitchen</p>
