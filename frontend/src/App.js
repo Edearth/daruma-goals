@@ -22,10 +22,8 @@ class App extends React.Component {
   }
 
   updateDaruma(newDaruma) {
-    console.log(newDaruma);
-    this.darumas[0].title = newDaruma.title;
+    this.darumas.unshift(newDaruma);
     this.setState({darumas: this.darumas});
-    console.log(this.state.darumas[0]);
   }
 
   render() {
@@ -34,8 +32,15 @@ class App extends React.Component {
         <DarumaCreationButton
             createDaruma={this.updateDaruma} />
         <header className="App-header">
-          <Daruma fill="crimson" className="dancing-daruma" alt="The selected daruma goal"/>
-          <p>{this.state.darumas[0].title}</p>
+          <div className="row current-daruma-display">
+            { this.state.darumas.map(daruma =>
+              <div className="column">
+                <Daruma fill="crimson" className="dancing-daruma" alt="The selected daruma goal"/>
+                <p>{daruma.title}</p>
+              </div>
+              )
+            }
+          </div>
         </header>
       </div>
     );
