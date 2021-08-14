@@ -28,6 +28,26 @@
   color: #61dafb;
 }
 
+.GoalCompletionModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  inset: 40px;
+  outline: none;
+}
+
+.GoalCompletionDialog {
+  width: 50%;
+  padding: 20px;
+  background: white;
+  overflow-y: auto;
+  border-radius: 16px;
+}
+
 @keyframes dance-animation {
   from {
     transform: translate(-20%, 0) rotate(-20deg);

@@ -6,11 +6,16 @@ class DarumaCompletionButton extends React.Component {
   constructor(props) {
     super(props);
     this.showDialog = this.showDialog.bind(this);
-    this.state = { isDialogShown:false };
+    this.hideDialog = this.hideDialog.bind(this);
+    this.state = { isDialogShown: false };
   }
 
   showDialog() {
-    this.setState({ isDialogShown:true });
+    this.setState({ isDialogShown: true });
+  }
+
+  hideDialog() {
+    this.setState({ isDialogShown: false })
   }
 
   render() {
@@ -18,7 +23,8 @@ class DarumaCompletionButton extends React.Component {
       <div style={{float:"right"}}>
         <button onClick={this.showDialog}>+</button>
         <DarumaCompletionDialog
-            shown={this.state.isDialogShown} />
+            shown={this.state.isDialogShown}
+            onRequestClose={this.hideDialog} />
       </div>
     );
   }
