@@ -34,7 +34,7 @@ class DarumaCreationDialog extends React.Component {
           isOpen={this.props.shown}>
         <div className="column dialog">
           <button
-              style={{marginLeft:"auto"}}
+              className="float-right-in-row"
               onClick={this.props.onRequestClose}>
             x
           </button>

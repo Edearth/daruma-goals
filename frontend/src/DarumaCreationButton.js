@@ -20,8 +20,8 @@ class DarumaCreationButton extends React.Component {
 
   render() {
     return (
-      <div style={{float:"right"}}>
-        <button onClick={this.showDialog}>+</button>
+      <div className="float-right-in-row">
+        <button onClick={this.showDialog}>Create new goal</button>
         <DarumaCreationDialog
             shown={this.state.isDialogShown}
             createDaruma={this.props.createDaruma}

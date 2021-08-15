@@ -31,9 +31,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <DarumaCreationButton
-            createDaruma={this.updateDaruma} />
         <header className="App-header">
+          <DarumaCreationButton
+              createDaruma={this.updateDaruma} />
           <div className="row wrap-items daruma-display-container">
             { this.state.darumas.map(daruma =>
               <div className="column daruma-display-item">
