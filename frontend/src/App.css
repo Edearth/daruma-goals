@@ -60,11 +60,17 @@
   display: flex;
   flex-direction: row;
 justify-content: center;
+.wrap-items {
+  flex-wrap: wrap;
 }
 
-.current-daruma-display {
-  width:100%;
-  overflow-x: auto;
+.daruma-display-container {
+  width:90%;
+}
+
+.daruma-display-item {
+  flex: 1 0 20%;
+  box-sizing: border-box;
 }
 
 @keyframes dance-animation {

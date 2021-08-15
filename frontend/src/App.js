@@ -13,7 +13,9 @@ cornsilk (instead of white?)
 
 class App extends React.Component {
 
-  darumas = [{title: "Create a goal now!"}];
+  darumas = [
+    {title: "Create a goal now!"}
+  ];
 
   constructor(props) {
     super(props);
@@ -32,10 +34,14 @@ class App extends React.Component {
         <DarumaCreationButton
             createDaruma={this.updateDaruma} />
         <header className="App-header">
-          <div className="row current-daruma-display">
+          <div className="row wrap-items daruma-display-container">
             { this.state.darumas.map(daruma =>
-              <div className="column">
-                <Daruma fill="crimson" className="dancing-daruma" alt="The selected daruma goal"/>
+              <div className="column daruma-display-item">
+                <Daruma
+                    fill="crimson"
+                    className="dancing-daruma"
+                    alt="The selected daruma goal"
+                    width="200px"/>
                 <p>{daruma.title}</p>
               </div>
               )
