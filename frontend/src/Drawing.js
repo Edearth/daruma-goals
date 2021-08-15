@@ -28,10 +28,10 @@ class Drawing extends React.Component {
 
   render() {
     return (
-      <div style={{border:"2px solid red"}}>
+      <div>
         <CanvasDraw
             ref={this.state.canvasRef}
-            style={{background:'transparent'}}
+            style={{background:'transparent', border:"2px solid red"}}
             brushColor='#111'
             canvasWidth={this.props.width}
             canvasHeight={this.props.height}

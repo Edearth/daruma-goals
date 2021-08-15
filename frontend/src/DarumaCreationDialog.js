@@ -43,7 +43,7 @@ class DarumaCreationDialog extends React.Component {
           <form onSubmit={this.createGoal}>
             <OverlapComponents>
               <Daruma width="400px" height="400px" />
-              <Drawing width="400px" height="400px" />
+              <Drawing width="200px" height="400px" />
             </OverlapComponents>
             <div className="row">
               <input
