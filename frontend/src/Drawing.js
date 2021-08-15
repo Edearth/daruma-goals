@@ -34,9 +34,9 @@ class Drawing extends React.Component {
             style={{background:'transparent'}}
             brushColor='#DDDDDD'
             hideGrid />
-        <button onClick={this.undo}>Undo</button>
-        <button onClick={this.clear}>Clear</button>
-        <button onClick={this.save}>Save</button>
+        <input type="button" onClick={this.undo} value="Undo" />
+        <input type="button" onClick={this.clear} value="Clear" />
+        <input type="button" onClick={this.save} value="Save" />
       </div>
     );
 
