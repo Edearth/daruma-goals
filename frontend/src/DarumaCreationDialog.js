@@ -2,6 +2,8 @@ import React from "react";
 import Modal from "react-modal";
 import './App.css';
 import { ReactComponent as Daruma } from './daruma.svg';
+import { Drawing } from './Drawing.js';
+import { OverlapComponents } from './OverlapComponents.js';
 
     Modal.setAppElement("#root");
 class DarumaCreationDialog extends React.Component {
@@ -39,7 +41,10 @@ class DarumaCreationDialog extends React.Component {
             x
           </button>
           <form onSubmit={this.createGoal}>
-            <Daruma width="400px" />
+            <OverlapComponents>
+              <Daruma width="400px" />
+              <Drawing />
+            </OverlapComponents>
             <div className="row">
               <input
                   style={{paddingRight:"auto"}}

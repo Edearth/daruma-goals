@@ -79,6 +79,17 @@
   box-sizing: border-box;
 }
 
+.overlap-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overlap-item {
+  grid-row: 1;
+  grid-column: 1/-1;
+}
+
 @keyframes dance-animation {
   from {
     transform: translate(-20%, 0) rotate(-20deg);
