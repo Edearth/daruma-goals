@@ -2,6 +2,7 @@ import { ReactComponent as Daruma} from './daruma.svg';
 import React from "react";
 import './App.css';
 import { DarumaCreationButton } from './DarumaCreationButton.js';
+import { Drawing } from './Drawing.js';
 
 /*
 crimson
@@ -32,6 +33,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <Drawing />
           <DarumaCreationButton
               createDaruma={this.updateDaruma} />
           <div className="row wrap-items daruma-display-container">
