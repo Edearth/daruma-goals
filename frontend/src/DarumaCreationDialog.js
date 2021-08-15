@@ -38,17 +38,18 @@ class DarumaCreationDialog extends React.Component {
               onClick={this.props.onRequestClose}>
             x
           </button>
-          <Daruma width="400px" />
-          <div className="row">
-            <input
-                style={{paddingRight:"auto"}}
-                name="title"
-                onChange={this.handleInputChange} />
-            <button
-                onClick={this.createGoal}>
-              Confirm
-            </button>
-          </div>
+          <form onSubmit={this.createGoal}>
+            <Daruma width="400px" />
+            <div className="row">
+              <input
+                  style={{paddingRight:"auto"}}
+                  name="title"
+                  onChange={this.handleInputChange} />
+              <button type="submit">
+                Confirm
+              </button>
+            </div>
+          </form>
         </div>
       </Modal>
     )
