@@ -32,7 +32,9 @@ class Drawing extends React.Component {
         <CanvasDraw
             ref={this.state.canvasRef}
             style={{background:'transparent'}}
-            brushColor='#DDDDDD'
+            brushColor='#111'
+            canvasWidth={this.props.width}
+            canvasHeight={this.props.height}
             hideGrid />
         <input type="button" onClick={this.undo} value="Undo" />
         <input type="button" onClick={this.clear} value="Clear" />
