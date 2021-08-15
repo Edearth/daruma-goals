@@ -1,7 +1,8 @@
-import { ReactComponent as Daruma} from './daruma.svg';
 import React from "react";
 import './App.css';
+import { Daruma } from './Daruma.js';
 import { DarumaCreationButton } from './DarumaCreationButton.js';
+import testFace from './test-face.png';
 
 /*
 crimson
@@ -41,6 +42,7 @@ class App extends React.Component {
                     fill="crimson"
                     className="dancing-daruma"
                     alt="The selected daruma goal"
+                    leftEye={testFace}
                     width="200px"/>
                 <p>{daruma.title}</p>
               </div>
