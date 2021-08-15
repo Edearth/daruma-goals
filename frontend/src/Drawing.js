@@ -9,6 +9,7 @@ class Drawing extends React.Component {
     };
     this.undo = this.undo.bind(this);
     this.clear = this.clear.bind(this);
+    this.save = this.save.bind(this);
   }
 
   undo() {
@@ -19,6 +20,12 @@ class Drawing extends React.Component {
     this.state.canvasRef.current.clear();
   }
 
+  save() {
+    let image_in_base64 = this.state.canvasRef.current.canvas.drawing.toDataURL('image/png');
+    console.log("drawing:"+image_in_base64);
+    //TODO add the network request later
+  }
+
   render() {
     return (
       <div style={{border:"2px solid red"}}>
@@ -26,9 +33,10 @@ class Drawing extends React.Component {
             ref={this.state.canvasRef}
             style={{background:'transparent'}}
             brushColor='#DDDDDD'
-            hideGrid="true" />
+            hideGrid />
         <button onClick={this.undo}>Undo</button>
         <button onClick={this.clear}>Clear</button>
+        <button onClick={this.save}>Save</button>
       </div>
     );
 
