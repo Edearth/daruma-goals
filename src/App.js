@@ -4,6 +4,12 @@ import { Daruma } from './Daruma.js';
 import { DarumaCreationButton } from './DarumaCreationButton.js';
 import testFace from './test-face.png';
 
+if(process.env.NODE_ENV) {
+  var browser = null;
+} else {
+  var browser = require("webextension-polyfill");
+}
+
 /*
 crimson
 darkseagreen
@@ -14,19 +20,25 @@ cornsilk (instead of white?)
 
 class App extends React.Component {
 
-  darumas = [
+  goals = [
     {title: "Create a goal now!"}
   ];
 
   constructor(props) {
     super(props);
-    this.state={darumas: this.darumas};
-    this.updateDaruma = this.updateDaruma.bind(this);
+    this.state={goals: this.goals};
+    this.updateGoals = this.updateGoals.bind(this);
+    browser?.storage.local.get('goals', (data) => {
+      this.state = data;
+    });
   }
 
-  updateDaruma(newDaruma) {
-    this.darumas.unshift(newDaruma);
-    this.setState({darumas: this.darumas});
+  updateGoals(newGoal) {
+    this.goals.unshift(newGoal);
+    this.setState({goals: this.goals});
+    browser?.storage.local.set(this.state, () => {
+      console.log("State updated with new goal: "+newGoal);
+    });
   }
 
   render() {
@@ -34,9 +46,9 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <DarumaCreationButton
-              createDaruma={this.updateDaruma} />
+              createDaruma={this.updateGoals} />
           <div className="row wrap-items daruma-display-container">
-            { this.state.darumas.map(daruma =>
+            { this.state.goals.map(daruma =>
               <div className="column daruma-display-item">
                 <Daruma
                     fill="crimson"
